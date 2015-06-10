@@ -1,0 +1,49 @@
+"*":
+  editor:
+    invisibles:
+      {}
+    softWrap: true
+  core:
+    projectHome: "/Users/matija/Code"
+    disabledPackages: [
+      "deprecation-cop"
+      "autocomplete-plus"
+      "jshint"
+    ]
+  "exception-reporting":
+    userId: "556c53c5-f426-635f-effd-680c3f2ed664"
+  welcome:
+    showOnStartup: false
+  react:
+    {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "markdown-preview":
+    {}
+  "atom-beautify":
+    _analyticsUserId: "2ac94dfb-1f32-4026-b170-e39d5fb02af4"
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  emmet:
+    {}
+  atomatigit:
+    {}
+  "git-history":
+    {}
+  jshint:
+    supportLintingJsx: true
+    validateOnlyOnSave: true
+  "toggle-quotes":
+    {}
+  "autocomplete-plus":
+    autoActivationDelay: 300
+  "travis-ci-status":
+    {}
+  "file-templates":
+    {}
+  "one-dark-ui":
+    {}
+".gfm.source":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: true
