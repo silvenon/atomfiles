@@ -32,6 +32,10 @@
   "travis-ci-status": {}
   "file-templates": {}
   "one-dark-ui": {}
+".git-commit.text":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: true
 ".gfm.source":
   editor:
     softWrap: true
