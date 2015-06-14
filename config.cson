@@ -6,7 +6,6 @@
   core:
     projectHome: "/Users/matija/Code"
     disabledPackages: [
-      "deprecation-cop"
       "autocomplete-plus"
       "jshint"
     ]
