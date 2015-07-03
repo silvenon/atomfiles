@@ -32,6 +32,8 @@
   "travis-ci-status": {}
   "file-templates": {}
   "one-dark-ui": {}
+  tabs:
+    enableVcsColoring: true
 ".git-commit.text":
   editor:
     softWrap: true
