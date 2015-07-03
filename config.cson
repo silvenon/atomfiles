@@ -36,6 +36,10 @@
   editor:
     softWrap: true
     softWrapAtPreferredLineLength: true
+".source.yaml":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: true
 ".gfm.source":
   editor:
     softWrap: true
