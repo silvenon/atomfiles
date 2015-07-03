@@ -34,6 +34,10 @@
   "one-dark-ui": {}
   tabs:
     enableVcsColoring: true
+  "linter-eslint":
+    showRuleIdInMessage: true
+    disableWhenNoEslintrcFileInPath: true
+  linter: {}
 ".git-commit.text":
   editor:
     softWrap: true
