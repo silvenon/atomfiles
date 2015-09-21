@@ -1,7 +1,6 @@
 "*":
   editor:
     invisibles: {}
-    fontSize: 17
   core:
     projectHome: "/Users/matija/Code"
     disabledPackages: [
