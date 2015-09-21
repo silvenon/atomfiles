@@ -41,6 +41,8 @@
     showRuleIdInMessage: true
     disableWhenNoEslintrcFileInPath: true
   linter: {}
+  pigments: {}
+  "merge-conflicts": {}
 ".git-commit.text":
   editor:
     softWrap: true
