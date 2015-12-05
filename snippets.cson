@@ -9,10 +9,71 @@
 # An example CoffeeScript snippet to expand log to console.log:
 #
 # '.source.coffee':
-#   'Console log':
-#     'prefix': 'log'
-#     'body': 'console.log $1'
+#	 'Console log':
+#		 'prefix': 'log'
+#		 'body': 'console.log $1'
 #
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
+
+'.text.html':
+	'IE conditional comments':
+		'prefix': 'ie'
+		'body': """
+			<!--[if ${1:lte} ie ${2:8}]>
+				$3
+			<![endif]-->
+		"""
+'.source.jsx':
+	'React: component':
+		'prefix': 'comp'
+		'body': """
+			import React, { PropTypes } from 'react';
+
+			const ${1:Comp} = React.createClass({
+				propTypes: {
+					$2
+				},
+
+				render() {
+					return (
+						$3
+					);
+				}
+			});
+
+			export default ${1:Comp};
+		"""
+	'React: stateless component':
+		'prefix': 'cmp'
+		'body': """
+			import React, { PropTypes } from 'react';
+
+			const ${1:Comp} = (props) => {
+				return (
+					$2
+				);
+			};
+
+			${1:Comp}.propTypes = {
+				$3
+			};
+
+			export default ${1:Comp};
+		"""
+	'React: stateless component (mini)':
+		'prefix': 'cp'
+		'body': """
+			import React, { PropTypes } from 'react';
+
+			const ${1:Comp} = (props) => (
+				$2
+			);
+
+			${1:Comp}.propTypes = {
+				$3
+			};
+
+			export default ${1:Comp};
+		"""
