@@ -9,8 +9,8 @@
       "minimap"
     ]
     themes: [
-      "nucleus-dark-ui"
-      "adventurous-syntax"
+      "atom-dark-ui"
+      "gruvbox"
     ]
   "exception-reporting":
     userId: "556c53c5-f426-635f-effd-680c3f2ed664"
