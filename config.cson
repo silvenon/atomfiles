@@ -42,7 +42,9 @@
   "linter-eslint":
     showRuleIdInMessage: true
     disableWhenNoEslintrcFileInPath: true
-  linter: {}
+  linter:
+    showErrorTabLine: true
+    errorPanelHeight: 25
   pigments: {}
   "merge-conflicts": {}
   minimap: {}
