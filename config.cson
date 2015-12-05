@@ -16,7 +16,8 @@
     userId: "556c53c5-f426-635f-effd-680c3f2ed664"
   welcome:
     showOnStartup: false
-  react: {}
+  react:
+    enabledForAllJavascriptFiles: true
   "tree-view":
     hideVcsIgnoredFiles: true
   "markdown-preview": {}
