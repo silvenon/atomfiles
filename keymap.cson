@@ -26,7 +26,7 @@
 
 'atom-text-editor':
   'alt-\'': 'expand-selection-to-quotes:toggle'
-'atom-text-editor[data-grammar="text html angular"]:not([mini]), atom-text-editor[data-grammar="text xml"]:not([mini])':
+'atom-text-editor[data-grammar*="mustache"]:not([mini])':
   'tab': 'emmet:expand-abbreviation-with-tab'
 'body':
   'ctrl-s': 'pane:split-right'
