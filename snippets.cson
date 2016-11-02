@@ -9,71 +9,136 @@
 # An example CoffeeScript snippet to expand log to console.log:
 #
 # '.source.coffee':
-#	 'Console log':
-#		 'prefix': 'log'
-#		 'body': 'console.log $1'
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
 #
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
 
 '.text.html':
-	'IE conditional comments':
-		'prefix': 'ie'
-		'body': """
-			<!--[if ${1:lte} ie ${2:8}]>
-				$3
-			<![endif]-->
-		"""
+  'IE conditional comments':
+    'prefix': 'ie'
+    'body': """
+      <!--[if ${1:lte} ie ${2:8}]>
+        $3
+      <![endif]-->
+    """
 '.source.jsx':
-	'React: component':
-		'prefix': 'comp'
-		'body': """
-			import React, { PropTypes } from 'react';
+  'React: stateless component (mini)':
+    'prefix': 'cp'
+    'body': """
+      import React, { PropTypes } from 'react';
 
-			const ${1:Comp} = React.createClass({
-				propTypes: {
-					$2
-				},
+      const ${1:MyComp} = (props) => (
+        $2
+      );
 
-				render() {
-					return (
-						$3
-					);
-				}
-			});
+      ${1:MyComp}.propTypes = {
+      };
 
-			export default ${1:Comp};
-		"""
-	'React: stateless component':
-		'prefix': 'cmp'
-		'body': """
-			import React, { PropTypes } from 'react';
+      export default ${1:MyComp};
+    """
+  'React: stateless component':
+    'prefix': 'cmp'
+    'body': """
+      import React, { PropTypes } from 'react';
 
-			const ${1:Comp} = (props) => {
-				return (
-					$2
-				);
-			};
+      const ${1:MyComp} = (props) => {
+        return (
+          $2
+        );
+      };
 
-			${1:Comp}.propTypes = {
-				$3
-			};
+      ${1:MyComp}.propTypes = {
+      };
 
-			export default ${1:Comp};
-		"""
-	'React: stateless component (mini)':
-		'prefix': 'cp'
-		'body': """
-			import React, { PropTypes } from 'react';
+      export default ${1:MyComp};
+    """
+  'React: component':
+    'prefix': 'comp'
+    'body': """
+      import React, { Component, PropTypes } from 'react';
 
-			const ${1:Comp} = (props) => (
-				$2
-			);
+      class ${1:MyComp} extends Component {
+        constructor(props) {
+          super(props);
+        }
 
-			${1:Comp}.propTypes = {
-				$3
-			};
+        render() {
+          return (
+            $2
+          );
+        }
+      }
 
-			export default ${1:Comp};
-		"""
+      ${1:MyComp}.propTypes = {
+      };
+
+      export default ${1:MyComp};
+    """
+  'React: connected component':
+    'prefix': 'component'
+    'body': """
+      import React, { Component, PropTypes } from 'react';
+      import { connect } from 'react-redux';
+
+      class ${1:MyComp} extends Component {
+        constructor(props) {
+          super(props);
+        }
+
+        render() {
+          return (
+            $2
+          );
+        }
+      }
+
+      ${1:MyComp}.propTypes = {
+      };
+
+      const mapStateToProps = state => ({
+      });
+
+      const mapDispatchToProps = {
+      };
+
+      export default connect(
+        mapStateToProps,
+        mapDispatchToProps
+      )(${1:MyComp});
+    """
+  'React: constructor':
+    'prefix': 'cs'
+    'body': """
+      constructor(props) {
+        super(props);
+        $1
+      }
+    """
+  'React: bind':
+    'prefix': 'bind'
+    'body': """
+      this._${1:method} = this._${1:method}.bind(this);$0
+    """
+  'React: pure shouldComponentUpdate':
+    'prefix': 'pure'
+    'body': """
+      shouldComponentUpdate($1) {
+        return shallowCompare(this, $1);
+      }$0
+    """
+  'React: spec':
+    'prefix': 'spec'
+    'body': """
+      import test from 'ava';
+      import React from 'react';
+      import { shallow } from 'enzyme';
+      import ${1:MyComp} from '${2:components}/${1:MyComp}';
+
+      test('${3:has some feature}', t => {
+        const wrapper = shallow(<${1:MyComp} />);
+      });
+    """
