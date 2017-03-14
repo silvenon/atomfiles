@@ -10,9 +10,23 @@
     backspaceTriggersAutocomplete: true
     confirmCompletion: "tab"
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
       "spell-check"
-      "react"
+      "linter-scss-lint"
+      "prettier-atom"
     ]
     projectHome: "/Users/matija/Code"
     telemetryConsent: "limited"
@@ -22,7 +36,9 @@
     ]
   editor:
     fontFamily: "FiraCode-Light"
+    fontSize: 15
     invisibles: {}
+    preferredLineLength: 100
   "ember-cli-helper":
     pathToEmberExecutable: '''
       /Users/matija/.nvm/versions/node/v4.2.2/bin/ember
@@ -47,6 +63,7 @@
     showErrorTabLine: true
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+    fixOnSave: true
     showRuleIdInMessage: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
@@ -56,11 +73,17 @@
   "linter-stylelint":
     disableWhenNoConfig: true
   "markdown-preview":
+    liveUpdate: false
     useGitHubStyle: true
   "merge-conflicts": {}
   minimap: {}
   "one-dark-ui": {}
   pigments: {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    prettierOptions: {}
+    useEslint: true
   react:
     enabledForAllJavascriptFiles: true
   "seti-ui":
@@ -90,6 +113,12 @@
   editor:
     softWrap: true
     softWrapAtPreferredLineLength: true
+".js.jsx.source":
+  editor:
+    autoIndent: true
+".languagebabel.ttlextension":
+  editor:
+    autoIndent: true
 ".source.yaml":
   editor:
     softWrap: false
